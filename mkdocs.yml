@@ -1,0 +1,7 @@
+site_name: TSGECO Documentation
+site_url: https://tsgeco.github.io
+repo_url: https://github.com/TSGECO/TSGECO.github.io
+repo_name: TSGECO/TSGECO.github.io
+
+theme:
+  name: material
