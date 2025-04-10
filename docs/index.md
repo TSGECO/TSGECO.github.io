@@ -49,7 +49,7 @@ Utilities for converting between TSG and other common formats:
 
 ## Getting Started
 
-To begin working with the TSG ecosystem, check out our [Quick Start Guide](./quickstart.md) or explore the individual tool documentation linked below.
+To begin working with the TSG ecosystem, check out our [Quick Start Guide](./getting-started/quickstart.md) or explore the individual tool documentation linked below.
 
 ## Community and Support
 

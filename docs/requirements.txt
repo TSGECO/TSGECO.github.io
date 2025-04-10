@@ -9,3 +9,5 @@ pygithub==2.6.1
 mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
 mkdocstrings
+mkdocs-minify-plugin
+mkdocstrings-python

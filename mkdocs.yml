@@ -2,6 +2,106 @@ site_name: TSGECO Documentation
 site_url: https://tsgeco.github.io
 repo_url: https://github.com/TSGECO/TSGECO.github.io
 repo_name: TSGECO/TSGECO.github.io
+site_description: Documentation for the TSG (Transcript Segment Graph) ecosystem
+site_author: TSGECO Team
+copyright: Copyright &copy; 2025 TSGECO Team
 
 theme:
   name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+  logo: images/tsgeco.png
+  favicon: images/tsgeco.png
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - Installation: getting-started/installation.md
+      - Quick Start Guide: getting-started/quickstart.md
+  - User Guide:
+      - Overview: user-guide/index.md
+      - Basic Usage: user-guide/basic-usage.md
+      - Advanced Features: user-guide/advanced-features.md
+  - API Reference:
+      - Overview: api-reference/index.md
+  - Community: community.md
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+
+# Extra CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TSGECO
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/TSGECO
