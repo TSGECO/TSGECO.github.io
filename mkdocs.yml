@@ -13,7 +13,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
-      accent: indigo
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -21,10 +21,13 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
-      accent: indigo
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
     - navigation.instant
     - navigation.tracking
@@ -32,12 +35,20 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.indexes
+    - navigation.footer
+    - navigation.top
     - content.code.copy
     - content.code.annotate
+    - content.tabs.link
     - search.highlight
     - search.suggest
+    - search.share
+    - toc.follow
+    - toc.integrate
   logo: images/tsgeco.png
   favicon: images/tsgeco.png
+  icon:
+    repo: fontawesome/brands/github
 
 # Navigation structure
 nav:
@@ -57,6 +68,7 @@ nav:
 # Extensions
 markdown_extensions:
   - admonition
+  - attr_list
   - codehilite
   - footnotes
   - meta
@@ -70,18 +82,26 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
       permalink: true
+      title: On this page
 
 plugins:
   - search
@@ -89,11 +109,15 @@ plugins:
       minify_html: true
   - git-revision-date-localized:
       type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
   - mkdocstrings:
       handlers:
         python:
           options:
             show_source: true
+  - social
+  - tags
 
 # Extra CSS and JavaScript
 extra_css:
@@ -105,3 +129,23 @@ extra:
       link: https://github.com/TSGECO
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/TSGECO
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/tsgeco
+    - icon: fontawesome/solid/envelope
+      link: mailto:info@tsgeco.org
+
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+  version:
+    provider: mike
+    default: latest

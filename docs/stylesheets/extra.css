@@ -1,0 +1,166 @@
+/* TSGECO Documentation Custom Styling */
+
+/* Typography enhancements */
+body {
+  --md-text-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --md-code-font: "Roboto Mono", "Courier New", Courier, monospace;
+}
+
+/* Hero section for landing page */
+.md-typeset h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom hero class */
+.hero {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(
+    to right,
+    rgba(var(--md-primary-fg-color--light-rgb), 0.1),
+    rgba(var(--md-accent-fg-color--transparent), 0.1)
+  );
+  border-radius: 4px;
+}
+
+.hero h1 {
+  font-size: 3.5rem !important;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.87;
+}
+
+/* Button styling */
+.md-button {
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-weight: 500;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.md-button--primary {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Card styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--md-code-bg-color);
+  transition: all 0.2s ease;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* Code block enhancements */
+.highlight pre {
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.highlight code {
+  font-size: 0.9rem;
+}
+
+/* Improve admonition styling */
+.admonition {
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-left-width: 4px;
+}
+
+.admonition-title {
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Navigation improvements */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-default-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-accent-fg-color--transparent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-accent-fg-color);
+}

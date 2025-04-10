@@ -1,5 +1,10 @@
 # Basic Usage
 
+<div class="hero">
+    <h1>Basic Usage</h1>
+    <p class="subtitle">Getting started with the TSG Ecosystem</p>
+</div>
+
 This guide covers the fundamental operations and concepts when working with the TSG Ecosystem.
 
 ## Core Concepts
@@ -8,11 +13,12 @@ Before diving into code examples, let's understand the key concepts:
 
 ### Transcript Segment Graph (TSG)
 
-A TSG consists of:
+!!! info "What is a TSG?"
+    A TSG consists of:
 
-- **Segments**: Individual pieces of transcript text with properties like start/end times and speaker information
-- **Connections**: Relationships between segments (sequential, overlapping, semantic, etc.)
-- **Metadata**: Additional information about the transcript or individual segments
+    - **Segments**: Individual pieces of transcript text with properties like start/end times and speaker information
+    - **Connections**: Relationships between segments (sequential, overlapping, semantic, etc.)
+    - **Metadata**: Additional information about the transcript or individual segments
 
 ## Working with TSG Graphs
 
@@ -35,7 +41,10 @@ graph.add_metadata(
 
 ### Adding Segments
 
-Segments represent individual pieces of transcript text:
+<div class="card">
+    <h3>Segments</h3>
+    <p>Segments represent individual pieces of transcript text with timing and speaker information.</p>
+</div>
 
 ```python
 # Add segments with speaker information
@@ -58,7 +67,10 @@ graph.add_segment(
 
 ### Creating Connections
 
-Connections establish relationships between segments:
+<div class="card">
+    <h3>Connections</h3>
+    <p>Connections establish relationships between segments in your graph.</p>
+</div>
 
 ```python
 # Sequential connection (timeline order)
@@ -74,30 +86,40 @@ graph.add_connection("seg_005", "seg_023",
 
 ### Querying the Graph
 
-Retrieve information from your graph:
+=== "By Speaker"
+    ```python
+    # Get all segments from a specific speaker
+    dr_smith_segments = graph.get_segments_by_property(speaker="Dr. Smith")
+    ```
 
-```python
-# Get all segments from a specific speaker
-dr_smith_segments = graph.get_segments_by_property(speaker="Dr. Smith")
+=== "By Time Range"
+    ```python
+    # Find segments within a time range
+    intro_segments = graph.get_segments_by_time(start=0.0, end=60.0)
+    ```
 
-# Find segments within a time range
-intro_segments = graph.get_segments_by_time(start=0.0, end=60.0)
-
-# Get all connections of a specific type
-semantic_connections = graph.get_connections_by_type("semantic")
-```
+=== "By Connection Type"
+    ```python
+    # Get all connections of a specific type
+    semantic_connections = graph.get_connections_by_type("semantic")
+    ```
 
 ## Working with TSG Files
 
 ### Saving and Loading
 
-```python
-# Save to TSG format
-graph.save("interview_transcript.tsg")
-
-# Load a TSG file
-loaded_graph = TSGraph.load("interview_transcript.tsg")
-```
+<div class="card-grid">
+    <div class="card">
+        <h3>Save to TSG</h3>
+        <p>Save your graph to a portable TSG format file.</p>
+        <pre><code class="language-python">graph.save("interview_transcript.tsg")</code></pre>
+    </div>
+    <div class="card">
+        <h3>Load from TSG</h3>
+        <p>Load a previously saved TSG file.</p>
+        <pre><code class="language-python">loaded_graph = TSGraph.load("interview_transcript.tsg")</code></pre>
+    </div>
+</div>
 
 ### Importing from Other Formats
 
@@ -121,20 +143,25 @@ export_to_csv(graph, "transcript_segments.csv", "transcript_connections.csv")
 
 ## Basic Analysis
 
-```python
-from tsgeco.analytics import basic_stats, speaker_analysis
-
-# Get basic statistics about the graph
-stats = basic_stats(graph)
-print(f"Total segments: {stats['segment_count']}")
-print(f"Average segment duration: {stats['avg_segment_duration']:.2f}s")
-
-# Analyze speaker patterns
-speaker_stats = speaker_analysis(graph)
-for speaker, data in speaker_stats.items():
-    print(f"{speaker}: {data['total_speaking_time']:.2f}s, {data['segment_count']} segments")
-```
+!!! example "Example: Basic Statistics"
+    ```python
+    from tsgeco.analytics import basic_stats, speaker_analysis
+    
+    # Get basic statistics about the graph
+    stats = basic_stats(graph)
+    print(f"Total segments: {stats['segment_count']}")
+    print(f"Average segment duration: {stats['avg_segment_duration']:.2f}s")
+    
+    # Analyze speaker patterns
+    speaker_stats = speaker_analysis(graph)
+    for speaker, data in speaker_stats.items():
+        print(f"{speaker}: {data['total_speaking_time']:.2f}s, {data['segment_count']} segments")
+    ```
 
 ## Next Steps
 
-- Learn about [advanced features](./advanced-features.md)
+<div class="card">
+    <h3>Advanced Features</h3>
+    <p>Ready to take your TSG usage to the next level?</p>
+    <a href="./advanced-features.md" class="md-button md-button--primary">Learn about advanced features</a>
+</div>
