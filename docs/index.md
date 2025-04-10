@@ -3,7 +3,7 @@
 <div class="hero">
     <h1>TSG Ecosystem</h1>
     <p class="subtitle">A powerful framework for transcript segment graph analysis</p>
-    <a href="./getting-started/quickstart.md" class="md-button md-button--primary">Get Started</a>
+    <a href="./getting-started/quickstart" class="md-button md-button--primary">Get Started</a>
     <a href="https://github.com/TSGECO" class="md-button">GitHub</a>
 </div>
 
@@ -62,10 +62,10 @@ TSG (Transcript Segment Graph) is a specialized format that combines the benefit
 
 ## Getting Started
 
-To begin working with the TSG ecosystem, check out our [Quick Start Guide](./getting-started/quickstart.md) or explore the individual tool documentation linked below.
+To begin working with the TSG ecosystem, check out our [Quick Start Guide](getting-started/quickstart.md) or explore the individual tool documentation linked below.
 
 !!! tip "New to TSG?"
-    If you're new to the TSG ecosystem, we recommend starting with the [Installation Guide](./getting-started/installation.md) followed by the [Quick Start Guide](./getting-started/quickstart.md).
+    If you're new to the TSG ecosystem, we recommend starting with the [Installation Guide](getting-started/installation.md) followed by the [Quick Start Guide](getting-started/quickstart.md).
 
 ## Community and Support
 

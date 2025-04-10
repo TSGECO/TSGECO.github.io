@@ -1,5 +1,5 @@
 site_name: TSGECO Documentation
-site_url: https://tsgeco.github.io
+site_url: https://tsgeco.github.io/
 repo_url: https://github.com/TSGECO/TSGECO.github.io
 repo_name: TSGECO/TSGECO.github.io
 site_description: Documentation for the TSG (Transcript Segment Graph) ecosystem
@@ -116,7 +116,6 @@ plugins:
         python:
           options:
             show_source: true
-  - social
   - tags
 
 # Extra CSS and JavaScript
@@ -145,7 +144,3 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-
-  version:
-    provider: mike
-    default: latest
