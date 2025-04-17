@@ -7,14 +7,17 @@
     <a href="https://github.com/TSGECO" class="md-button">GitHub</a>
 </div>
 
-Welcome to the TSG (Transcript Segment Graph) ecosystem documentation. TSG is a new format designed for efficient representation and analysis of transcript data in graph format.
+Welcome to the TSG (Transcript Segment Graph) ecosystem documentation.
+TSG is a new format designed for efficient representation and analysis of transcript data in graph format.
 
   ![TSECO Logo](images/tsgeco.png){ width="800" }
   <figcaption>The TSG Ecosystem</figcaption>
 
 ## What is TSG?
 
-TSG (Transcript Segment Graph) is a specialized format that combines the benefits of transcript segment data structures with graph-based representations. This format enables powerful analysis, visualization, and processing of transcript data with complex relationships.
+TSG (Transcript Segment Graph) is a specialized format that combines the benefits of transcript segment data structures with graph-based representations.
+This format enables powerful analysis, visualization, and processing of transcript data with complex relationships.
+The complete TSG format specification can be found in the [TSG Specification](https://github.com/TSGECO/tsg/blob/main/docs/tsg.pdf).
 
 ## Core Components of the TSG Ecosystem
 

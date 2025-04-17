@@ -4,7 +4,7 @@ This guide covers all the ways to install and set up the TSG Ecosystem component
 
 ## System Requirements
 
-- Python 3.8 or higher
+- Python 3.10 or higher
 - 4GB RAM minimum (8GB recommended for larger datasets)
 - Operating systems:
   - Windows 10 or higher
@@ -16,7 +16,7 @@ This guide covers all the ways to install and set up the TSG Ecosystem component
 The simplest way to install the TSG Ecosystem is through pip:
 
 ```bash
-pip install tsgeco
+pip install tsgraph
 ```
 
 This installs the core library with basic functionality.
